@@ -7,14 +7,7 @@ import { Product } from 'src/app/models/product.mode';
 })
 export class ProductBoxComponent implements OnInit{
   @Input() fullWidthMode = false;
-  product: Product | undefined = {
-    id: 1,
-    title: 'Pokeball',
-    price: 200,
-    catergory: 'Pokeballs',
-    description: 'Descripción',
-    image: 'https:via.placeholder.com/150',
-  };
+  @Input() product: Product | undefined;
 
   @Output() addToCart = new EventEmitter();
   
